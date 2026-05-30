@@ -121,3 +121,11 @@ This screenshot shows the netcheck command verifying gateway, DNS server, intern
 
 This screenshot shows the supportreport command combining system info, disk space, network checks, and local user review into one timestamped help desk escalation report.
 
+
+
+## Optional Bonus Scripts
+
+| Script | Purpose | Output | Status |
+|---|---|---|---|
+| `Get-RecentEventLogErrors.ps1` | Reviews recent System and Application errors without collecting message bodies | Console + saved report | Done |
+
