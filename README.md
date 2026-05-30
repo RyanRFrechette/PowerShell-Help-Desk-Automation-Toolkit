@@ -103,3 +103,11 @@ Run `New-SupportReport.ps1` to generate a clean, timestamped report the next-tie
 
 *Built by Ryan Frechette â€” IT support professional building a practical PowerShell automation portfolio.*
 
+
+
+### Phase 3 — Network Connectivity Report
+
+![Network connectivity script output](screenshots/outputs/03-network-connectivity-output.png)
+
+This screenshot shows the netcheck command verifying gateway, DNS server, internet IP connectivity, and DNS resolution for first-level network troubleshooting.
+
