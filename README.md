@@ -34,7 +34,7 @@ A collection of beginner-friendly PowerShell scripts that automate common help d
 | `Get-SystemInfoReport.ps1` | Captures OS, hardware, and uptime info | Console + saved report | Done |
 | `Get-DiskSpaceReport.ps1` | Reviews all drives and flags low-space volumes | Console + saved report | Done |
 | `Test-NetworkConnectivity.ps1` | Pings gateway, DNS, and internet; tests resolution | Console + saved report | Done |
-| `Get-LocalUserSummary.ps1` | Lists local accounts and enabled/disabled status | Console + saved report | Planned |
+| `Get-LocalUserSummary.ps1` | Lists local accounts and enabled/disabled status | Console + saved report | Done |
 | `New-SupportReport.ps1` | Bundles all checks into one timestamped support report | Saved report file | Planned |
 
 > Scripts are read-only. None modify system settings, user accounts, or files.
@@ -110,4 +110,5 @@ Run `New-SupportReport.ps1` to generate a clean, timestamped report the next-tie
 ![Network connectivity script output](screenshots/outputs/03-network-connectivity-output.png)
 
 This screenshot shows the netcheck command verifying gateway, DNS server, internet IP connectivity, and DNS resolution for first-level network troubleshooting.
+
 
