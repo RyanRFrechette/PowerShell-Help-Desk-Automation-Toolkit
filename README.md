@@ -40,7 +40,7 @@ A beginner-friendly PowerShell portfolio project that automates common Windows h
 
 ![System info script output](screenshots/outputs/01-system-info-script-output.png)
 
-Shows the script collecting core endpoint details a help desk technician would gather at the start of a ticket: hostname, OS version, uptime, RAM, and CPU.
+Shows the `sysinfo` command collecting core endpoint details a help desk technician would gather at the start of a ticket: hostname, OS version, uptime, RAM, and CPU.
 
 ### Phase 2 - Disk Space Report
 
@@ -116,3 +116,4 @@ Run `Get-RecentEventLogErrors.ps1` or the `eventerrors` shortcut to review recen
 Core project complete. Optional event log bonus script added. Final review completed after fixing README encoding issues and restoring the full screenshot walkthrough.
 
 Built by Ryan Frechette as a practical PowerShell automation portfolio project for help desk and IT support roles.
+
