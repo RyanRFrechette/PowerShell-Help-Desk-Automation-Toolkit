@@ -1,21 +1,19 @@
-$outputFile = Join-Path $PSScriptRoot "..\outputs\disk-space-example.txt"
-
-$fixedDrives = Get-PSDrive -PSProvider FileSystem | Where-Object { $_.Used -ne $null -and $_.Free -ne $null }
-
-$reportLines = foreach ($drive in $fixedDrives) {
-    $totalBytes  = $drive.Used + $drive.Free
-    $totalGB     = [math]::Round($totalBytes / 1GB, 1)
-    $freeGB      = [math]::Round($drive.Free  / 1GB, 1)
-    $percentFree = if ($totalBytes -gt 0) { [math]::Round(($drive.Free / $totalBytes) * 100, 1) } else { 0 }
-    $lowMarker   = if ($percentFree -lt 15) { " [LOW]" } else { "" }
-
-    "{0,-6} Total: {1,8} GB   Free: {2,8} GB   % Free: {3,6}%{4}" -f `
-        "$($drive.Name):", $totalGB, $freeGB, $percentFree, $lowMarker
+﻿$ErrorActionPreference = "Stop"
+$outputPath = Join-Path $PSScriptRoot "..\outputs\disk-space-example.txt"
+$drives = Get-CimInstance Win32_LogicalDisk -Filter "DriveType=3" | Sort-Object DeviceID
+$rows = foreach ($drive in $drives) {
+    $totalGB = [math]::Round($drive.Size / 1GB, 2)
+    $freeGB = [math]::Round($drive.FreeSpace / 1GB, 2)
+    $percentFree = if ($drive.Size -gt 0) { [math]::Round(($drive.FreeSpace / $drive.Size) * 100, 1) } else { 0 }
+    $status = if ($percentFree -lt 15) { "LOW SPACE" } else { "OK" }
+    [pscustomobject]@{ Drive=$drive.DeviceID; TotalGB=$totalGB; FreeGB=$freeGB; PercentFree="$percentFree%"; Status=$status }
 }
-
-$header    = "Disk Space Report - $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-$separator = "-" * 60
-$output    = @($header, $separator) + $reportLines + $separator
-
-$output | ForEach-Object { Write-Host $_ }
-$output | Out-File -FilePath $outputFile -Encoding UTF8
+$report = @()
+$report += "=============================="
+$report += "  Disk Space Report"
+$report += "=============================="
+$report += ($rows | Format-Table -AutoSize | Out-String).TrimEnd()
+$report += "=============================="
+$report | Tee-Object -FilePath $outputPath
+Write-Host ""
+Write-Host "Report saved to: $outputPath"
