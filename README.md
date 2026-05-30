@@ -129,3 +129,11 @@ This screenshot shows the supportreport command combining system info, disk spac
 |---|---|---|---|
 | `Get-RecentEventLogErrors.ps1` | Reviews recent System and Application errors without collecting message bodies | Console + saved report | Done |
 
+
+
+### Phase 6 — Recent Event Log Errors
+
+![Recent event log errors script output](screenshots/outputs/06-event-log-errors-output.png)
+
+This screenshot shows the eventerrors command reviewing recent System and Application error events while omitting message bodies to reduce private data exposure.
+
