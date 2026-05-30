@@ -1,139 +1,118 @@
-# PowerShell Help Desk Automation Toolkit
+﻿# PowerShell Help Desk Automation Toolkit
 
 ## Recruiter TL;DR
 
-A collection of beginner-friendly PowerShell scripts that automate common help desk tasks — checking system health, reviewing disk space, testing network connectivity, and generating timestamped support reports. Built to demonstrate practical Windows endpoint skills for remote IT support roles.
-
----
+A beginner-friendly PowerShell portfolio project that automates common Windows help desk checks: system information, disk space, network connectivity, local user review, support report generation, and recent event log errors. Built to demonstrate practical Windows endpoint support skills for remote IT support roles.
 
 ## What This Project Proves
 
 - I can write safe, readable PowerShell scripts without modifying systems.
-- I understand what information a help desk technician needs to triage a support ticket quickly.
-- I can document technical work in plain language that non-technical stakeholders can read.
-- I follow a disciplined commit-and-verify workflow suitable for team environments.
-
----
+- I understand the first checks a help desk technician runs during triage.
+- I can document technical work clearly for non-technical hiring managers.
+- I can build a screenshot-backed GitHub project with repeatable commands and saved outputs.
 
 ## Skills Demonstrated
 
 | Skill | How It Shows Up |
 |---|---|
-| PowerShell scripting | 5 scripts covering real help desk tasks |
-| Windows endpoint knowledge | System info, disk, network, local users |
-| Read-only safety discipline | No system changes without explicit approval |
+| PowerShell scripting | Six scripts covering real help desk tasks |
+| Windows endpoint troubleshooting | System info, disk, network, local users, event logs |
+| Read-only safety discipline | No destructive system changes |
 | Documentation | HR-readable README, case study, resume bullets |
-| Git workflow | Screenshot-backed commits at every step |
-
----
+| Git workflow | Screenshot-backed commits and pushed proof |
 
 ## Scripts
 
 | Script | Purpose | Output | Status |
 |---|---|---|---|
-| `Get-SystemInfoReport.ps1` | Captures OS, hardware, and uptime info | Console + saved report | Done |
-| `Get-DiskSpaceReport.ps1` | Reviews all drives and flags low-space volumes | Console + saved report | Done |
-| `Test-NetworkConnectivity.ps1` | Pings gateway, DNS, and internet; tests resolution | Console + saved report | Done |
-| `Get-LocalUserSummary.ps1` | Lists local accounts and enabled/disabled status | Console + saved report | Done |
-| `New-SupportReport.ps1` | Bundles all checks into one timestamped support report | Saved report file | Done |
+| `Get-SystemInfoReport.ps1` | Captures hostname, OS, uptime, RAM, and CPU | Console + saved report | Done |
+| `Get-DiskSpaceReport.ps1` | Reviews drive size, free space, percent free, and low-space status | Console + saved report | Done |
+| `Test-NetworkConnectivity.ps1` | Checks gateway, DNS server, internet IP, and DNS resolution | Console + saved report | Done |
+| `Get-LocalUserSummary.ps1` | Lists local accounts, enabled status, last logon, and password requirement | Console + saved report | Done |
+| `New-SupportReport.ps1` | Combines the core checks into one timestamped support report | Saved report file | Done |
+| `Get-RecentEventLogErrors.ps1` | Reviews recent System and Application errors while omitting message bodies | Console + saved report | Done |
 
-> Scripts are read-only. None modify system settings, user accounts, or files.
-
----
+> Scripts are read-only. They are designed for portfolio demonstration and first-level troubleshooting practice.
 
 ## Screenshot Walkthrough
 
-*Screenshots will be added here as each script is built and tested. Each image includes a plain-language explanation of what a recruiter or hiring manager is looking at.*
+### Phase 1 - System Information Report
 
-<!-- 00-repo-setup.png -->
+![System info script output](screenshots/outputs/01-system-info-script-output.png)
 
-### Script 1 — System Information Report
+Shows the script collecting core endpoint details a help desk technician would gather at the start of a ticket: hostname, OS version, uptime, RAM, and CPU.
 
-![System info script output showing hostname, OS version, uptime, RAM, and CPU collected from a Windows endpoint](screenshots/outputs/01-system-info-script-output.png)
+### Phase 2 - Disk Space Report
 
-Running `Get-SystemInfoReport.ps1` pulls key system details — machine name, OS version, how long it's been running, memory, and processor — and saves them to a text file. A help desk tech would run this at the start of a support call to quickly understand the endpoint before troubleshooting.
+![Disk space script output](screenshots/outputs/02-disk-space-script-output.png)
 
-<!-- 02-disk-space-script-output.png -->
-<!-- 03-network-connectivity-script-output.png -->
-<!-- 04-local-user-summary-output.png -->
-<!-- 05-support-report-created-output.png -->
+Shows drive capacity, free space, percent free, and low-space status for storage and performance troubleshooting.
 
----
-
-## Example Support Scenarios
-
-**Scenario 1 — "My computer is running slow"**
-Run `Get-SystemInfoReport.ps1` and `Get-DiskSpaceReport.ps1` to check uptime, memory, and disk usage before escalating.
-
-**Scenario 2 — "I can't reach the shared drive"**
-Run `Test-NetworkConnectivity.ps1` to confirm gateway reachability, DNS resolution, and internet access in under 30 seconds.
-
-**Scenario 3 — "Prepare this ticket for escalation"**
-Run `New-SupportReport.ps1` to generate a clean, timestamped report the next-tier tech can open immediately.
-
----
-
-## Safety Notes
-
-- All scripts run as read-only by default. No files are modified, deleted, or created outside the `outputs/reports/` folder.
-- Scripts do not collect credentials, passwords, or personal files.
-- Example output files contain generic placeholder data — no real machine names, usernames, or IP addresses are committed to this repo.
-- Screenshots are reviewed and cropped before being added to ensure no private information is visible.
-
----
-
-## How to Run Locally
-
-1. Clone this repo: `git clone https://github.com/yourusername/PowerShell-Help-Desk-Automation-Toolkit`
-2. Open PowerShell (no admin required for read-only scripts).
-3. Navigate to the `scripts/` folder: `cd .\scripts\`
-4. Run any script: `.\Get-SystemInfoReport.ps1`
-5. Review output in the console or check `outputs/reports/` for saved files.
-
-> Tested on Windows 10 and Windows 11. PowerShell 5.1+.
-
----
-
-## Documentation
-
-- [Case Study](case-study.md) — walkthrough of the project from a help desk technician's perspective
-- [Resume Bullets](resume-bullets.md) — ready-to-paste bullet points for IT support job applications
-
----
-
-*Built by Ryan Frechette — IT support professional building a practical PowerShell automation portfolio.*
-
-
-
-### Phase 3 � Network Connectivity Report
+### Phase 3 - Network Connectivity Report
 
 ![Network connectivity script output](screenshots/outputs/03-network-connectivity-output.png)
 
-This screenshot shows the netcheck command verifying gateway, DNS server, internet IP connectivity, and DNS resolution for first-level network troubleshooting.
+Shows the `netcheck` command verifying gateway, DNS server, internet IP connectivity, and DNS resolution.
 
+### Phase 4 - Local User Summary Report
 
+![Local user summary script output](screenshots/outputs/04-local-user-summary-output.png)
 
+Shows the `usersummary` command reviewing local Windows accounts, enabled status, last logon, and password requirement.
 
-
-### Phase 5 � Support Report Generator
+### Phase 5 - Support Report Generator
 
 ![Support report generator output](screenshots/outputs/05-support-report-output.png)
 
-This screenshot shows the supportreport command combining system info, disk space, network checks, and local user review into one timestamped help desk escalation report.
+Shows the `supportreport` command combining system info, disk space, network checks, and local user review into one timestamped help desk escalation report.
 
-
-
-## Optional Bonus Scripts
-
-| Script | Purpose | Output | Status |
-|---|---|---|---|
-| `Get-RecentEventLogErrors.ps1` | Reviews recent System and Application errors without collecting message bodies | Console + saved report | Done |
-
-
-
-### Phase 6 � Recent Event Log Errors
+### Phase 6 - Recent Event Log Errors
 
 ![Recent event log errors script output](screenshots/outputs/06-event-log-errors-output.png)
 
-This screenshot shows the eventerrors command reviewing recent System and Application error events while omitting message bodies to reduce private data exposure.
+Shows the `eventerrors` command reviewing recent System and Application error events while omitting message bodies to reduce private data exposure.
 
+## Example Support Scenarios
+
+**Scenario 1 - Computer running slow**  
+Run `Get-SystemInfoReport.ps1` and `Get-DiskSpaceReport.ps1` to check uptime, memory, CPU, and disk usage.
+
+**Scenario 2 - Cannot reach websites or shared resources**  
+Run `Test-NetworkConnectivity.ps1` or the `netcheck` shortcut to verify gateway, DNS, internet IP, and DNS resolution.
+
+**Scenario 3 - Account review needed**  
+Run `Get-LocalUserSummary.ps1` or the `usersummary` shortcut to review local accounts and enabled status.
+
+**Scenario 4 - Ticket escalation**  
+Run `New-SupportReport.ps1` or the `supportreport` shortcut to generate a timestamped support report.
+
+**Scenario 5 - Recent errors after a crash or issue**  
+Run `Get-RecentEventLogErrors.ps1` or the `eventerrors` shortcut to review recent high-level errors without exposing full event messages.
+
+## Safety Notes
+
+- Scripts are read-only and avoid destructive commands.
+- Scripts save output only inside the repo `outputs/` folder.
+- Event log message bodies are omitted to reduce private data exposure.
+- Screenshots are included as public proof of work.
+- This is a portfolio project, not an enterprise monitoring tool.
+
+## How to Run Locally
+
+1. Clone this repo: `git clone https://github.com/RyanRFrechette/PowerShell-Help-Desk-Automation-Toolkit.git`
+2. Open PowerShell.
+3. Navigate to the project folder.
+4. Run a script from the `scripts/` folder, for example: `.\scripts\Get-SystemInfoReport.ps1`
+5. Review console output or saved reports in `outputs/`.
+
+## Documentation
+
+- [Case Study](case-study.md)
+- [Resume Bullets](resume-bullets.md)
+- [LinkedIn Post](linkedin-post.md)
+
+## Project Status
+
+Core project complete. Optional event log bonus script added. Final review completed after fixing README encoding issues and restoring the full screenshot walkthrough.
+
+Built by Ryan Frechette as a practical PowerShell automation portfolio project for help desk and IT support roles.
