@@ -1,20 +1,15 @@
-# LinkedIn Post — PowerShell Help Desk Automation Toolkit
+# LinkedIn Post � PowerShell Help Desk Automation Toolkit
 
-> **Status:** Placeholder. Write this after the project is complete and the GitHub repo is public.
+I finished a PowerShell Help Desk Automation Toolkit as part of my IT support portfolio.
 
----
+The project includes read-only scripts for:
+- System information
+- Disk space review
+- Network connectivity checks
+- Local user account summary
+- Support report generation
+- Recent event log errors
 
-## Draft Post
+I built it to show practical Windows troubleshooting, PowerShell automation, GitHub documentation, and screenshot-backed proof of work.
 
-*To be written after Phase 7 — Final Documentation Polish.*
-
-Suggested topics to cover:
-- What the project is and why I built it
-- The specific help desk problems it solves
-- What I learned about PowerShell and safe automation
-- Link to the GitHub repo
-- Call to action for IT support roles
-
----
-
-*Keep the post honest: this is a practical beginner project, not an enterprise automation platform.*
+Repo: https://github.com/RyanRFrechette/PowerShell-Help-Desk-Automation-Toolkit

@@ -1,29 +1,26 @@
-# Case Study — PowerShell Help Desk Automation Toolkit
+# Case Study � PowerShell Help Desk Automation Toolkit
 
-> **Status:** In progress. This case study will be completed after all core scripts are built and tested.
+## Overview
+This project is a beginner-friendly PowerShell automation toolkit for common Windows help desk checks.
 
----
+## Problem
+Help desk technicians often need to gather the same basic troubleshooting information repeatedly: system details, disk space, network status, local account status, and recent event log errors.
 
-## The Problem
+## Solution
+I built a set of read-only PowerShell scripts that collect this information quickly and save example outputs for escalation or documentation.
 
-Help desk technicians spend significant time gathering basic system information during support calls — checking disk space, verifying network connectivity, reviewing user accounts — before they can even begin diagnosing the actual issue. This is repetitive, manual, and slow.
+## Skills Demonstrated
+- PowerShell scripting
+- Windows endpoint troubleshooting
+- Disk space review
+- Network connectivity testing
+- Local user account review
+- Event log review
+- Git/GitHub documentation
+- Screenshot-backed technical writing
 
-## The Approach
+## Safety
+The scripts are read-only and avoid destructive commands. Event log message bodies are omitted to reduce private data exposure.
 
-Build a small set of read-only PowerShell scripts that automate the information-gathering phase of a support ticket. Each script targets one common task, produces clean output, and can be run in under 60 seconds.
-
-## Scripts Built
-
-*To be completed after Phase 1–5.*
-
-## Results
-
-*To be completed after all scripts are tested with example output.*
-
-## What I Learned
-
-*To be completed.*
-
----
-
-*This case study is written for IT support hiring managers, not engineers. Technical details are kept to a minimum.*
+## Result
+The final repo includes scripts, sample outputs, screenshots, and documentation written for help desk / IT support hiring managers.
