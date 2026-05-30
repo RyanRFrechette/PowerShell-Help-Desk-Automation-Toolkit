@@ -1,0 +1,56 @@
+==============================
+  Help Desk Support Report
+==============================
+Generated: 05/30/2026 17:41:09
+
+--- System Info ---
+==============================
+  System Information Report
+==============================
+Hostname    : RYAN-PC
+OS Version  : Microsoft Windows 11 Pro
+Uptime      : 0d 4h 52m
+Total RAM   : 31.81 GB
+CPU         : 13th Gen Intel(R) Core(TM) i7-13700HX
+==============================
+
+--- Disk Space ---
+==============================
+  Disk Space Report
+==============================
+
+Drive TotalGB FreeGB PercentFree Status
+----- ------- ------ ----------- ------
+C:     873.61 637.81 73%         OK
+==============================
+
+--- Network Connectivity ---
+==============================
+  Network Connectivity Report
+==============================
+
+Check           Target       Result
+-----           ------       ------
+Default Gateway 192.168.12.1 PASS  
+DNS Server      192.168.12.1 PASS  
+Internet IP     8.8.8.8      PASS  
+DNS Resolution  google.com   PASS
+==============================
+
+--- Local User Summary ---
+==============================
+  Local User Summary Report
+==============================
+
+Name                Enabled LastLogon            PasswordRequired
+----                ------- ---------            ----------------
+Administrator         False                                  True
+CodexSandboxOffline    True 5/22/2026 3:23:53 PM             True
+CodexSandboxOnline     True                                  True
+DefaultAccount        False                                 False
+Guest                 False                                 False
+ryanr                  True                                  True
+WDAGUtilityAccount    False                                  True
+WsiAccount            False 5/7/2026 2:49:17 PM             False
+==============================
+==============================
