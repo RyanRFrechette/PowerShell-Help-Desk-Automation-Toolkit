@@ -29,13 +29,13 @@ A collection of beginner-friendly PowerShell scripts that automate common help d
 
 ## Scripts
 
-| Script | Purpose | Output |
-|---|---|---|
-| `Get-SystemInfoReport.ps1` | Captures OS, hardware, and uptime info | Console + saved report |
-| `Get-DiskSpaceReport.ps1` | Reviews all drives and flags low-space volumes | Console + saved report |
-| `Test-NetworkConnectivity.ps1` | Pings gateway, DNS, and internet; tests resolution | Console |
-| `Get-LocalUserSummary.ps1` | Lists local accounts and enabled/disabled status | Console + saved report |
-| `New-SupportReport.ps1` | Bundles all checks into one timestamped support report | Saved report file |
+| Script | Purpose | Output | Status |
+|---|---|---|---|
+| `Get-SystemInfoReport.ps1` | Captures OS, hardware, and uptime info | Console + saved report | Done |
+| `Get-DiskSpaceReport.ps1` | Reviews all drives and flags low-space volumes | Console + saved report | Planned |
+| `Test-NetworkConnectivity.ps1` | Pings gateway, DNS, and internet; tests resolution | Console | Planned |
+| `Get-LocalUserSummary.ps1` | Lists local accounts and enabled/disabled status | Console + saved report | Planned |
+| `New-SupportReport.ps1` | Bundles all checks into one timestamped support report | Saved report file | Planned |
 
 > Scripts are read-only. None modify system settings, user accounts, or files.
 
