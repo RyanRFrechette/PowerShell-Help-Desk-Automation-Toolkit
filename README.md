@@ -46,7 +46,13 @@ A collection of beginner-friendly PowerShell scripts that automate common help d
 *Screenshots will be added here as each script is built and tested. Each image includes a plain-language explanation of what a recruiter or hiring manager is looking at.*
 
 <!-- 00-repo-setup.png -->
-<!-- 01-system-info-script-output.png -->
+
+### Script 1 — System Information Report
+
+![System info script output showing hostname, OS version, uptime, RAM, and CPU collected from a Windows endpoint](screenshots/outputs/01-system-info-script-output.png)
+
+Running `Get-SystemInfoReport.ps1` pulls key system details — machine name, OS version, how long it's been running, memory, and processor — and saves them to a text file. A help desk tech would run this at the start of a support call to quickly understand the endpoint before troubleshooting.
+
 <!-- 02-disk-space-script-output.png -->
 <!-- 03-network-connectivity-script-output.png -->
 <!-- 04-local-user-summary-output.png -->
