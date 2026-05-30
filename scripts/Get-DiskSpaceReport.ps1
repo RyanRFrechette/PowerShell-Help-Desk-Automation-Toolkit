@@ -13,7 +13,7 @@ $reportLines = foreach ($drive in $fixedDrives) {
         "$($drive.Name):", $totalGB, $freeGB, $percentFree, $lowMarker
 }
 
-$header    = "Disk Space Report — $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
+$header    = "Disk Space Report - $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
 $separator = "-" * 60
 $output    = @($header, $separator) + $reportLines + $separator
 

@@ -1,5 +1,5 @@
-Disk Space Report — 2026-05-30 09:15
+Disk Space Report - 2026-05-30 17:34
 ------------------------------------------------------------
-C:     Total:    238.0 GB   Free:    180.0 GB   % Free:   75.6%
-D:     Total:    500.0 GB   Free:     60.0 GB   % Free:   12.0% [LOW]
+C:     Total:    873.6 GB   Free:    637.8 GB   % Free:     73%
+Temp:  Total:    873.6 GB   Free:    637.8 GB   % Free:     73%
 ------------------------------------------------------------
