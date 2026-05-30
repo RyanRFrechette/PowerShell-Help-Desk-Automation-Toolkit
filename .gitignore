@@ -20,3 +20,6 @@ $RECYCLE.BIN/
 
 # Keep outputs/reports/ tracked (example output files belong in the repo)
 # Keep screenshots/ tracked (proof screenshots belong in the repo)
+
+# Local Claude plugins
+.claude/plugins/
