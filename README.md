@@ -113,3 +113,11 @@ This screenshot shows the netcheck command verifying gateway, DNS server, intern
 
 
 
+
+
+### Phase 5 — Support Report Generator
+
+![Support report generator output](screenshots/outputs/05-support-report-output.png)
+
+This screenshot shows the supportreport command combining system info, disk space, network checks, and local user review into one timestamped help desk escalation report.
+
